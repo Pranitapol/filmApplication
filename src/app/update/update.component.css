@@ -1,0 +1,31 @@
+.container-fluid{
+    display: grid;
+    justify-content: center;
+    flex-direction: column;
+   background-color:rgb(46, 203, 214);
+   padding:35px
+}
+
+
+label{
+    font-size: 20px;
+}
+button{
+    margin: 4px;
+}
+.form-control{
+    padding:20px;
+
+}
+
+.wrapper{
+  
+    background-color:rgb(97, 64, 52);
+}
+a{
+    font-size: 30px;
+    color:rgb(24, 16, 13);
+    float: right;
+    padding:15px;
+    
+}

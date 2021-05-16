@@ -1,0 +1,59 @@
+<div class="wrapper">
+
+    <a routerLink="/">insert director data</a>
+    <a routerLink="get">Get the Data</a>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <form [formGroup]="filmObj" method="post" (ngSubmit)="onSubmit()">
+                    <div class="form-group">
+                        <label>film Name: </label>
+                        <input type="text" class="form-control" placeholder="enter film name" formControlName="filmName"
+                            required>
+
+                        <span class="error" *ngIf="filmName.hasError('required') && filmName.touched">film name is
+                            required</span>
+
+
+                    </div>
+
+
+                    <div class="form-group">
+                        <label>film id </label>
+                        <input type="number" class="form-control" placeholder="enter value" formControlName="filmId"
+                            required>
+
+                        <span class="error" *ngIf="filmId.hasError('required') && filmId.touched">film id is
+                            required</span>
+
+                    </div>
+
+
+
+                    <div class="form-group">
+                        <label>Box office collection: </label>
+                        <input type="number" class="form-control" placeholder="enter value"
+                            formControlName="boxOfficeCollection" required>
+
+                        <span class="error"
+                            *ngIf="boxOfficeCollection.hasError('required') && boxOfficeCollection.touched">field is
+                            required</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label>rating: </label>
+                        <input type="number" class="form-control" placeholder="enter value" formControlName="filmRating"
+                            required>
+
+                        <span class="error" *ngIf="filmRating.hasError('required') && filmRating.touched">field is
+                            required</span>
+                    </div>
+
+                    <button class="btn btn-primary" [disabled]="!filmObj.valid">submit</button>
+
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,32 @@
+
+<div class="wrapper">
+    <a routerLink="/">Go back</a>
+</div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col">
+            <form [formGroup]="filmObj" (ngSubmit)="onSubmit()">
+                <div class="form-group">
+                    film Name:
+                    <input type="text" class="form-control" formControlName="filmName" required>
+                </div>
+                <button>delete</button>
+            </form>
+
+            <div *ngFor="let d of filmDetails">
+                <div class="card text-white bg-secondary mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title">films Details</h5>
+                        <p class="card-text">
+                            Film Name : {{d.filmName}}<br>
+                            Film Id : {{d.filmId}}<br>
+                            Film ratings : {{d.filmRating}}<br>
+                            Box oofice Collection : {{d.boxOfficeCollection}}<br>
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

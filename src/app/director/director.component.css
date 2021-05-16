@@ -1,0 +1,43 @@
+.container-fluid{
+    display: grid;
+    justify-content: center;
+    flex-direction: column;
+   background-color:rgb(219, 124, 86);
+   padding:35px
+}
+.error{
+    font-size: 18px;
+    color:red;
+}
+.valid{
+    font-size: 18px;
+    color:red;
+}
+a{
+    font-size: 30px;
+    color:rgb(24, 16, 13);
+    float: right;
+    padding:15px;
+    
+}
+.wrapper{
+  
+    background-color:rgb(219, 124, 86);
+}
+a:nth-child(2){
+    font-size: 30px;
+    color:rgb(24, 16, 13);
+    float: left;
+    padding:15px;
+}
+
+label{
+    font-size: 20px;
+}
+button{
+    margin: 4px;
+}
+.form-control{
+    padding:20px;
+
+}

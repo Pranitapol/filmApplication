@@ -1,0 +1,42 @@
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col">
+            <button (click)="getDirector()">get director details</button>
+            
+           <button (click)="getFilm()">get film details</button>
+            <div *ngFor="let d of directors">
+                <div class="card text-white bg-info mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title">director Details</h5>
+                        <p class="card-text">
+                            
+                director Name : {{d.directorName}}<br>
+                director Gender : {{d.directorGender}}<br>
+                director Age: {{d.directorAge}}<br>
+                director Award Count : {{d.directorAwardCount}}<br>
+                
+                <span style="float: right;"><button  (click)="onUpdate(d.directorName)">Update</button></span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+           
+           <div *ngFor="let d of films">
+            <div class="card text-white bg-secondary mb-4">
+                <div class="card-body">
+                    <h5 class="card-title">films Details</h5>
+                    <p class="card-text">
+                       Film Name : {{d.filmName}}<br>
+                       Film Id : {{d.filmId}}<br>
+                       Film ratings : {{d.filmRating}}<br>
+                       Box Office Collection : {{d.boxOfficeCollection}}<br>
+                       
+                <span style="float: right;"><button (click)="onDelete(d.filmName)">Delete</button></span>
+                    </p>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+</div>

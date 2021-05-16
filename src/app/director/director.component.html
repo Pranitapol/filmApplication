@@ -1,0 +1,64 @@
+<div class="wrapper">
+    <a routerLink="film">insert film data</a>
+
+    <a routerLink="director/get">Get The Data</a>
+    <div class="container-fluid">
+
+        <div class="row">
+            <div class="col">
+                <form [formGroup]="filmObj" method="post" (ngSubmit)="onSubmit()">
+                    <div class="form-group">
+                        <label>Director Name: </label>
+                        <input type="text" class="form-control" placeholder="enter director name"
+                            formControlName="directorName" required>
+
+                        <span class="error" *ngIf="directorName.hasError('required') && directorName.touched">director
+                            name
+                            is required</span>
+
+
+                    </div>
+
+
+                    <div class="form-group">
+                        <label>Director Age: </label>
+                        <input type="number" class="form-control" placeholder="enter director age"
+                            formControlName="directorAge" required>
+
+                        <span class="error" *ngIf="directorAge.hasError('required') && directorAge.touched">director age
+                            is
+                            required</span>
+
+                    </div>
+
+                    <label for="gender">Gender:</label>
+                    <div>
+                        <input id="male" type="radio" value="male" name="directorGender"
+                            formControlName="directorGender" required>
+                        <label for="male">Male</label>
+                    </div>
+
+                    <div>
+                        <input id="female" type="radio" value="female" name="directorGender"
+                            formControlName="directorGender" required>
+                        <label for="female">Female</label>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Director award Count : </label>
+                        <input type="number" class="form-control" placeholder="enter award count"
+                            formControlName="directorAwardCount" required>
+
+                        <span class="error"
+                            *ngIf="directorAwardCount.hasError('required') && directorAwardCount.touched">award count is
+                            required</span>
+                    </div>
+                    <button class="btn btn-primary" [disabled]="!filmObj.valid">submit</button><br>
+
+                </form>
+
+            </div>
+
+        </div>
+    </div>
+</div>

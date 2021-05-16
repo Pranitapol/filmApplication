@@ -1,0 +1,16 @@
+
+a{
+    font-size: 30px;
+    color:rgb(24, 16, 13);
+    float: right;
+    padding:15px;
+    
+}
+.wrapper{
+  
+    background-color:rgb(219, 124, 86);
+}
+
+button{
+    margin: 4px;
+}
